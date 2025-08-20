@@ -74,6 +74,50 @@
       "balance": 49474,
       "createdAt": "2023-12-07T04:39:38.383Z",
       "modifiedAt": "2024-03-07T00:07:36.510Z"
+    },
+    {
+      "id": "Rv1DFZEgt",
+      "uuid": "52cd5dac-30cd-4bfd-9268-6c2d14b970f8",
+      "firstName": "Ruthie",
+      "lastName": "Prosacco",
+      "username": "Reyes.Osinski",
+      "password": "$2a$10$GX2oSgzTNHzcHYklaiLj2ORBys3z5sjudUYRgBw/JpZ4to32GWrdO",
+      "balance": 0,
+      "createdAt": "2025-08-20T12:46:29.319Z",
+      "modifiedAt": "2025-08-20T12:46:29.319Z"
+    },
+    {
+      "id": "h8lMPNNa-",
+      "uuid": "6fb28998-e45d-43ee-a970-38ee55d073f0",
+      "firstName": "Ted",
+      "lastName": "Parisian",
+      "username": "Heath93",
+      "password": "$2a$10$XtLhw8OVNvTN7dnNfzvQZeO6iNlNEp4yzZKyagsh7USefWM6EXiYK",
+      "balance": 0,
+      "createdAt": "2025-08-20T12:47:12.525Z",
+      "modifiedAt": "2025-08-20T12:47:12.525Z"
+    },
+    {
+      "id": "TiVz36ZI_",
+      "uuid": "81835fd2-7b4c-46c6-84a3-2fdb1089cdff",
+      "firstName": "Ruthie",
+      "lastName": "Prosacco",
+      "username": "Reyes.Osinski",
+      "password": "$2a$10$vlSlgo/r8vuzL06eWwgdPeIWn56ap.E8i3kdIPXkU8G6UrLtGPLpC",
+      "balance": 0,
+      "createdAt": "2025-08-20T15:32:54.024Z",
+      "modifiedAt": "2025-08-20T15:32:54.024Z"
+    },
+    {
+      "id": "P2ZYHw8V0",
+      "uuid": "aa3e5e70-7e67-451a-b302-0ef0e6c07622",
+      "firstName": "Ruthie",
+      "lastName": "Prosacco",
+      "username": "Reyes.Osinski",
+      "password": "$2a$10$fVVs.ha76MRP/KFpKQ8elu5bHNQtDrb02.py81Asz3BGrid6Dhxym",
+      "balance": 0,
+      "createdAt": "2025-08-20T19:39:46.998Z",
+      "modifiedAt": "2025-08-20T19:39:46.998Z"
     }
   ],
   "contacts": [

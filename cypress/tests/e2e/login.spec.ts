@@ -1,25 +1,28 @@
-import database from '../../fixtures/database.json'
+import database from '../../../data/database-seed.json';
+import SignUpPage from '../../pages/signUpPage'; 
+import SignInPage from '../../pages/signInPage'; 
 
-const user = database.users[0];
+const user = database.users[3];
+const signUpPage = new SignUpPage();
+const signInPage = new SignInPage();
 
 describe('Test Real World App', () => {
+
+});
+
   it('Sign Up', () => {
-    cy.visit('http://localhost:3000/');
-    cy.get('[data-test="signup"]').click();
-    cy.get('#firstName').type(user.firstName);
-    cy.get('#lastName').type(user.lastName);
-    cy.get('#username').type(user.username);
-    cy.get('#password').type(user.password);
-    cy.get('#confirmPassword').type(user.password);
-    cy.get('[data-test="signup-submit"]').click();
-
+    signUpPage.accessSignUpPage();
+    signUpPage.registerForm(user.firstName, user.lastName, user.username, user.password, user.password);
+    signInPage.accessSignInPage();
   })
-})
 
-  it('Log In', () => {
-    cy.visit('http://localhost:3000/signin');
-    cy.get('#username').type(user.username);
-    cy.get('#password').type(user.password);
-    cy.get('[data-test="signin-submit"]').click();
+  it('Success - Sign In', () => {
+    signInPage.accessSignInPage();
+    signInPage.fillForm(user.username, user.password);
+  })
 
+  it('Fail - Sign In', () => {
+    signInPage.accessSignInPage();
+    signInPage.fillForm(user.username, user.password);
+    signInPage.checkAccessInvalid();
   })
