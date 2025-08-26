@@ -1,0 +1,16 @@
+{
+    "signUpUser": {
+        "firstName": "Ted",
+        "lastName": "Parisian",
+        "username": "Heath93",
+        "password": "s3cret"
+    },
+    "loginUser": {
+        "username": "Heath93",
+        "password": "s3cret"
+    },
+    "loginFail": {
+        "username": "Heath93",
+        "password": "senha"
+    }
+}

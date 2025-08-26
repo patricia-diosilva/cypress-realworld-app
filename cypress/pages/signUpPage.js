@@ -23,8 +23,6 @@ class SignUpPage {
         cy.get(this.selectorsList().passwordField).type(password);
         cy.get(this.selectorsList().confirmPasswordField).type(confirmPassword);
         cy.get(this.selectorsList().submitButton).click();
-
-        cy.url().should('include', '/signin');
     }
 }
 

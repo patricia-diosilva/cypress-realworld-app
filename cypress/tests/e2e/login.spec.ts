@@ -1,28 +1,28 @@
-import database from '../../../data/database-seed.json';
+import userData from '../../fixtures/userData.json';
 import SignUpPage from '../../pages/signUpPage'; 
 import SignInPage from '../../pages/signInPage'; 
 
-const user = database.users[3];
 const signUpPage = new SignUpPage();
 const signInPage = new SignInPage();
 
 describe('Test Real World App', () => {
 
-});
-
   it('Sign Up', () => {
     signUpPage.accessSignUpPage();
-    signUpPage.registerForm(user.firstName, user.lastName, user.username, user.password, user.password);
+    signUpPage.registerForm(userData.signUpUser.firstName, userData.signUpUser.lastName, userData.signUpUser.username, userData.signUpUser.password, userData.signUpUser.password);
     signInPage.accessSignInPage();
+  })
+
+    it('Fail - Sign In', () => {
+    signInPage.accessSignInPage();
+    signInPage.fillForm(userData.loginFail.username, userData.loginFail.password);
+    signInPage.checkAccessInvalid();
   })
 
   it('Success - Sign In', () => {
     signInPage.accessSignInPage();
-    signInPage.fillForm(user.username, user.password);
+    signInPage.fillForm(userData.loginUser.username, userData.loginUser.password);
+    signInPage.checkAccessValid();
   })
 
-  it('Fail - Sign In', () => {
-    signInPage.accessSignInPage();
-    signInPage.fillForm(user.username, user.password);
-    signInPage.checkAccessInvalid();
-  })
+});

@@ -10,7 +10,7 @@ class SignInPage {
         return selectors
     }
     accessSignInPage() {
-        cy.visit('/signin/');
+        cy.visit('http://localhost:3000/signin/');
     }
     fillForm(username, password) {
         cy.get(this.selectorsList().usernameField).type(username);
@@ -19,12 +19,12 @@ class SignInPage {
     }
 
     checkAccessValid() {
-        cy.url().should('include', '/dashboard');
-        cy.get('[data-test="user-avatar"]').should('be.visible');
+        cy.location('pathname').should('eq', '/');
+        cy.get('[data-test="sidenav-username"]').should('be.visible');
     }
+
     checkAccessInvalid() {
-        cy.get('[data-test="signin-error"]').should('be.visible');
-        cy.contains('Username or password is invalid').should('exist');
+        cy.get("[role='alert']").contains('Username or password is invalid');
     }
 }
 
