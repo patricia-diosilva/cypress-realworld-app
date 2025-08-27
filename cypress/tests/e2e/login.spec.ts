@@ -5,7 +5,7 @@ import SignInPage from '../../pages/signInPage';
 const signUpPage = new SignUpPage();
 const signInPage = new SignInPage();
 
-describe('Test Real World App', () => {
+describe('Test RWA Login', () => {
 
   it('Sign Up', () => {
     signUpPage.accessSignUpPage();

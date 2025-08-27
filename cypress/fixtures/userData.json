@@ -12,5 +12,17 @@
     "loginFail": {
         "username": "Heath93",
         "password": "senha"
+    },
+
+    "transferSuccess": {
+        "transferTo": "Reyes.Osinski",
+        "amount": "333pizza",
+        "description": "pizza"
+    },
+
+    "transferFail": {
+        "transferTo": "Reyes.Osinski",
+        "amount": "3000",
+        "description": "pizza"
     }
 }

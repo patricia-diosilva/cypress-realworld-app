@@ -24,7 +24,7 @@ class SignInPage {
     }
 
     checkAccessInvalid() {
-        cy.get("[role='alert']").contains('Username or password is invalid');
+        cy.get("[role='alert']").contains('Username or password is invalid').should('be.visible');
     }
 }
 
