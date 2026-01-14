@@ -16,10 +16,10 @@ describe('Test RWA Transfer', () => {
 
   });
 
-//    it('Fail Transfer - Insufficient Funds', () => {
-//        signInPage.accessSignInPage();
-//        signInPage.fillForm(userData.loginUser.username, userData.loginUser.password);
-//        transferPage.accessTransferPage();
-//        transferPage.fillTransferForm(userData.transferFail.transferTo, userData.transferFail.amount, userData.transferFail.description);
-//   });
-// });
+   it('Fail Transfer - Insufficient Funds', () => {
+       signInPage.accessSignInPage();
+       signInPage.fillForm(userData.loginUser.username, userData.loginUser.password);
+       transferPage.accessTransferPage();
+       transferPage.fillTransferForm(userData.transferFail.transferTo, userData.transferFail.amount, userData.transferFail.description);
+  });
+});

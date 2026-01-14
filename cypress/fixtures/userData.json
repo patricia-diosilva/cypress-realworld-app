@@ -5,6 +5,9 @@
         "username": "Heath93",
         "password": "s3cret"
     },
+    "incompleteSignUpUser": {
+        "firstName": "{backspace}"
+    },
     "loginUser": {
         "username": "Heath93",
         "password": "s3cret"
@@ -16,7 +19,7 @@
 
     "transferSuccess": {
         "transferTo": "Reyes.Osinski",
-        "amount": "333pizza",
+        "amount": "333",
         "description": "pizza"
     },
 

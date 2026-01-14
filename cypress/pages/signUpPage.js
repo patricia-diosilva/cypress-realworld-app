@@ -7,6 +7,7 @@ class SignUpPage {
             usernameField: '[name="username"]',
             passwordField: '[name="password"]',
             confirmPasswordField: '[name="confirmPassword"]',
+            incompleteAlert: '.css-yff4jp-MuiFormHelperText-root',
             submitButton: '[type="submit"]',
         }
         return selectors
@@ -22,7 +23,13 @@ class SignUpPage {
         cy.get(this.selectorsList().usernameField).type(username);
         cy.get(this.selectorsList().passwordField).type(password);
         cy.get(this.selectorsList().confirmPasswordField).type(confirmPassword);
+    }
+    SignUpPageSuccess() {
         cy.get(this.selectorsList().submitButton).click();
+    }
+
+    incompleteSignUp(){
+        cy.get('.css-yff4jp-MuiFormHelperText-root').should('be.visible');
     }
 }
 
