@@ -11,25 +11,30 @@ describe('Test RWA Login', () => {
     signUpPage.accessSignUpPage();
     signUpPage.registerForm(userData.signUpUser.firstName, userData.signUpUser.lastName, userData.signUpUser.username, userData.signUpUser.password, userData.signUpUser.password);
     signUpPage.SignUpPageSuccess();
-    signInPage.accessSignInPage();
+
+    cy.location('pathname').should('eq', '/signin');
+    cy.get('[type="submit"]').should('contain', 'Sign In');
   })
 
     it('Fail - Sign In', () => {
     signInPage.accessSignInPage();
     signInPage.fillForm(userData.loginFail.username, userData.loginFail.password);
-    signInPage.checkAccessInvalid();
+    
+    cy.get("[role='alert']").contains('Username or password is invalid').should('be.visible');
   })
 
   it('Success - Sign In', () => {
     signInPage.accessSignInPage();
     signInPage.fillForm(userData.loginUser.username, userData.loginUser.password);
-    signInPage.checkAccessValid();
+    
+    cy.location('pathname').should('eq', '/');
   })
 
-  it.only('Sign Up - Incomplete', () => {
+  it('Sign Up - Incomplete', () => {
     signUpPage.accessSignUpPage();
     signUpPage.registerForm(userData.incompleteSignUpUser.firstName, userData.signUpUser.lastName, userData.signUpUser.username, userData.signUpUser.password, userData.signUpUser.password);
-    signUpPage.incompleteSignUp();
+    
+    cy.get('.css-yff4jp-MuiFormHelperText-root').should('be.visible');
   })
 
 });

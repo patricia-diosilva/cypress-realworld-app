@@ -27,10 +27,6 @@ class SignUpPage {
     SignUpPageSuccess() {
         cy.get(this.selectorsList().submitButton).click();
     }
-
-    incompleteSignUp(){
-        cy.get('.css-yff4jp-MuiFormHelperText-root').should('be.visible');
-    }
 }
 
 export default SignUpPage;

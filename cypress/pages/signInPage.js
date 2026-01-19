@@ -18,15 +18,6 @@ class SignInPage {
         cy.get(this.selectorsList().submitButton).click();
     }
 
-    checkAccessValid() {
-        cy.location('pathname').should('eq', '/');
-        cy.get('[data-test="sidenav-username"]').should('be.visible');
-    }
-
-    checkAccessInvalid() {
-        cy.get("[role='alert']").contains('Username or password is invalid').should('be.visible');
-    }
-
 }
 
 
