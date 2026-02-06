@@ -1,25 +1,27 @@
 import { signIn } from 'aws-amplify/auth';
 import userData from '../../fixtures/userData.json';
 import SignInPage from '../../pages/signInPage'; 
+import MenuPage from '../../pages/menuPage';
 import TransferPage from '../../pages/transferPage';
 
 const signInPage = new SignInPage();
 const transferPage = new TransferPage();
 
-describe('Test RWA Transfer', () => {
-    it('Success Transfer', () => {
+describe('Enviar dinheiro com saldo suficiente', () => {
+  it('Deve enviar dinheiro com sucesso', () => {
         signInPage.accessSignInPage();
         signInPage.fillForm(userData.loginUser.username, userData.loginUser.password);
-        transferPage.accessTransferPage();
+        transferPage.newTransactionPage();
         transferPage.fillTransferForm(userData.transferSuccess.transferTo, userData.transferSuccess.amount, userData.transferSuccess.description);
         transferPage.transferSubmitted();
+  })
+});
 
-  });
-
-   it('Fail Transfer - Insufficient Funds', () => {
+describe('Enviar dinheiro com saldo insuficiente', () => {
+  it('Deve exibir mensagem de erro ao enviar dinheiro sem saldo suficiente', () => {
        signInPage.accessSignInPage();
        signInPage.fillForm(userData.loginUser.username, userData.loginUser.password);
-       transferPage.accessTransferPage();
+       transferPage.newTransactionPage();
        transferPage.fillTransferForm(userData.transferFail.transferTo, userData.transferFail.amount, userData.transferFail.description);
   });
 });

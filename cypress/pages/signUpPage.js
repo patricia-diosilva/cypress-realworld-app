@@ -26,6 +26,7 @@ class SignUpPage {
     }
     SignUpPageSuccess() {
         cy.get(this.selectorsList().submitButton).click();
+        
     }
 }
 

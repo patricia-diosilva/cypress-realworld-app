@@ -17,15 +17,13 @@ class TransferPage {
         return selectors;
     }
     
-    accessTransferPage() {
-        cy.get(this.selectorsList().transferButton).click();
-    }
+    
     newTransactionPage() {
-        cy.get(this.selectorsList().newTransaction).contains('Create another transaction').click();
+        cy.get(this.selectorsList().transferButton).click()
     }
 
     fillTransferForm(transferTo, amount, description) {
-        cy.get(this.selectorsList().searchField).type(transferTo);
+        cy.get(this.selectorsList().searchField).type(transferTo, { force: true });
         cy.get(this.selectorsList().selectUser).click();
         cy.get(this.selectorsList().amountField).type(amount);
         cy.get(this.selectorsList().descriptionField).type(description);

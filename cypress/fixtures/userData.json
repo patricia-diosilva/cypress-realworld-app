@@ -1,19 +1,19 @@
 {
     "signUpUser": {
-        "firstName": "Ted",
-        "lastName": "Parisian",
-        "username": "Heath93",
+        "firstName": "Kristian",
+        "lastName": "Bradtke",
+        "username": "Arvilla_Hegmann",
         "password": "s3cret"
     },
     "incompleteSignUpUser": {
         "firstName": "{backspace}"
     },
     "loginUser": {
-        "username": "Heath93",
+        "username": "Arvilla_Hegmann",
         "password": "s3cret"
     },
     "loginFail": {
-        "username": "Heath93",
+        "username": "Arvilla_Hegmann",
         "password": "senha"
     },
 
