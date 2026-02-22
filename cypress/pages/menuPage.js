@@ -2,18 +2,16 @@ class MenuPage {
 
     selectorsList() {
         const selectors = {
-    transferButton: '[href="/transaction]'
+            transferButton: '[href="/transaction/new]'
         };
         
         return selectors;
     }
 
-accessTransferPage() {
+    accessTransferPage() {
         cy.get(this.selectorsList().transferButton).click();
 
+    }
 }
-
-}
-
 
 export default MenuPage;

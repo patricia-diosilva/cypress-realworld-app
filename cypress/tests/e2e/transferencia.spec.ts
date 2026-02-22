@@ -6,6 +6,7 @@ import TransferPage from '../../pages/transferPage';
 
 const signInPage = new SignInPage();
 const transferPage = new TransferPage();
+const menuPage = new MenuPage();
 
 describe('Enviar dinheiro com saldo suficiente', () => {
   it('Deve enviar dinheiro com sucesso', () => {
@@ -23,5 +24,6 @@ describe('Enviar dinheiro com saldo insuficiente', () => {
        signInPage.fillForm(userData.loginUser.username, userData.loginUser.password);
        transferPage.newTransactionPage();
        transferPage.fillTransferForm(userData.transferFail.transferTo, userData.transferFail.amount, userData.transferFail.description);
+       cy.contains('Insufficient Balance').should('be.visible');
   });
 });
