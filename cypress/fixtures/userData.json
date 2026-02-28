@@ -1,20 +1,25 @@
 {
     "signUpUser": {
-        "firstName": "Kristian",
-        "lastName": "Bradtke",
-        "username": "Arvilla_Hegmann",
+        "firstName": "Maria",
+        "lastName": "João",
+        "username": "Joao_Maria",
         "password": "s3cret"
     },
     "incompleteSignUpUser": {
         "firstName": "{backspace}"
     },
-    "loginUser": {
-        "username": "Arvilla_Hegmann",
+    "loginNewUser": {
+        "username": "Joao_Maria",
         "password": "s3cret"
     },
     "loginFail": {
         "username": "Arvilla_Hegmann",
         "password": "senha"
+    },
+
+    "loginUser": {
+        "username": "Arvilla_Hegmann",
+        "password": "s3cret"
     },
 
     "transferSuccess": {
@@ -27,5 +32,12 @@
         "transferTo": "Reyes.Osinski",
         "amount": "3000",
         "description": "pizza"
+    },
+
+    "emptyUser":{
+        "bankName": "Santander",
+        "routingNumber": "918273645",
+        "accountNumber": "192837465"
     }
+
 }

@@ -34,9 +34,9 @@ class TransferPage {
         cy.get(this.selectorsList().transferConfirmation).should('contain', 'Transaction Submitted!');
     }
 
-    // insufficientFunds() {
-    //     cy.get(this.selectorsList().transferConfirmation).should('contain', 'Insufficient funds');
-    // }
+    insufficientFunds() {
+        cy.get(this.selectorsList().transferConfirmation).should('contain', 'Insufficient funds');
+    }
 }
 
 export default TransferPage;

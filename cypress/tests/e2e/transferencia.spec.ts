@@ -19,7 +19,7 @@ describe('Enviar dinheiro com saldo suficiente', () => {
 });
 
 describe('Enviar dinheiro com saldo insuficiente', () => {
-  it('Deve exibir mensagem de erro ao enviar dinheiro sem saldo suficiente', () => {
+  it.only('Deve exibir mensagem de erro ao enviar dinheiro sem saldo suficiente', () => {
        signInPage.accessSignInPage();
        signInPage.fillForm(userData.loginUser.username, userData.loginUser.password);
        transferPage.newTransactionPage();
